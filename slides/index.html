@@ -52,6 +52,13 @@
               float:right;
               width:50%;
           }
+
+          .reveal .slides > section .vertical-center {
+              display: flex;
+              align-items: center;
+              height: 560px;
+              justify-content: center;
+          }
         </style>
 
 		<!--[if lt IE 9]>
@@ -719,14 +726,274 @@ private List&lt;List&lt;String&gt;&gt; partition(List&lt;String&gt; source,
                         <pre><code class="java">int parts = calculateAmountOfParts(source);
 List&lt;List&lt;String&gt;&gt; result = ListUtils.partition(source, parts);</code></pre>
                     </section>
+                </section>
+
+                <section>
+                    <section>
+                        <div class="left vertical-center"><h1>Git</h1></div>
+                        <div class="right"><img src="img/git-xkcd-1597.png" /></div>
+                    </section>
 
                     <section>
-                        <h2>Thanks!</h2>
-                        <p>
-                            Slides available at <a href="https://github.com/infosupport/studenttrack-clean-code">https://git.io/clean-code</a>
-                            <img src="img/github-qr.png" style="height: 50vh;"/>
-                        </p>
+                        <p style="font-weight: bold;font-size:120%;">"I'm an egotistical bastard, and I name
+                            all my projects after myself. First 'Linux',
+                            now 'git'."</p>
+                        <p style="text-align: right;">Linus Torvalds</p>
                     </section>
+
+                    <section>
+                        <h2>The commands</h2>
+                        <div class="left">
+                            <ul>
+                                <li>init</li>
+                                <li>add</li>
+                                <li>commit</li>
+                                <li>checkout</li>
+                                <li>branch</li>
+                                <li>merge</li>
+                                <li>log</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li>status</li>
+                                <li>reset</li>
+                                <li>rm</li>
+                                <li>fetch</li>
+                                <li>pull</li>
+                                <li>push</li>
+                                <li>remote</li>
+                                <li>clone</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <img src="img/git-raise-hands.jpg" />
+                    </section>
+
+                    <section>
+                        <h2>Why version control?</h2>
+                        <div class="left vertical-center" ><img src="img/git-folder-duplication.png" /></div>
+                        <div class="right vertical-center">
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">Duplication</li>
+                                <li class="fragment" data-fragment-index="2">Unclear what changes</li>
+                                <li class="fragment" data-fragment-index="3">Hard to merge changes</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Why version control?</h2>
+                        <div class="left" >
+                            <div>
+                            <img src="img/git-easy-merging.png" />
+                            <p>Easy/Tool supported merging</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="fragment" data-fragment-index="2">
+                                <img src="img/git-less-duplication.png" />
+                                <p>Less duplication</p>
+                            </div>
+                            <br/><br/>
+                            <div class="fragment" data-fragment-index="3">
+                                <img src="img/git-clean-history.png" />
+                                <p>Clear History / Easy to restore old version</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Flavors of version control</h2>
+                        <img src="img/git-centralized.png" style="height: 50vh;"/>
+                    </section>
+
+                    <section>
+                        <h2>Flavors of version control</h2>
+                        <img src="img/git-decentralized.png" style="height: 50vh;"/>
+                    </section>
+
+                    <section>
+                        <div class="left vertical-center"><img src="img/git-bitkeeper.png"></div>
+                        <div class="right vertical-center"><img class="fragment" data-fragment-index="1" src="img/git-logo.png"></div>
+                    </section>
+
+                    <section>
+                        <h2>The three stages</h2>
+                        <img src="img/git-stages-1.jpg" />
+                    </section>
+
+                    <section>
+                        <h2>The three stages</h2>
+                        <img src="img/git-stages-2.jpg" />
+                    </section>
+
+                    <section>
+                        <h2>The three stages</h2>
+                        <img src="img/git-stages-3.jpg" />
+                    </section>
+
+                    <section>
+                        <h2>.gitignore</h2>
+                        <img src="img/git-ignore.png" /><br/>
+                        <a class="fragment" data-fragment-index="1" href="https://www.gitignore.io/">https://www.gitignore.io/</a>
+                    </section>
+
+                    <section>
+                        <h2>Opdracht (+- 10 minuten)</h2>
+                        <ol>
+                            <li>Creer een nieuwe git repository</li>
+                            <li>Voeg een bestand toe -> bestand1.txt</li>
+                            <li>Verplaats bestand1.txt naar de staging area</li>
+                            <li>Maak bestand2.txt aan en zorg dat git dit bestand negeert </li>
+                            <li>Commit bestand1.txt</li>
+                            <li>Maak de commit ongedaan (NEW)</li>
+                            <li>Pas bestand1.txt aan</li>
+                            <li>Commit alle wijzigingen in de staging area</li>
+                            <li>Pas het bestand aan en voeg deze toe aan de commit zonder de commit ongedaan te maken (NEW)</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>Behind the scenes</h2>
+                        <img src="img/git-blob.png" /><br/>
+                        <img class="fragment" data-fragment-index="1" src="img/git-blob-content.png" />
+                    </section>
+
+                    <section>
+                        <h2>Behind the scenes</h2>
+                        <img src="img/git-tree.png" />
+                    </section>
+
+                    <section>
+                        <h2>Behind the scenes</h2>
+                        <img src="img/git-commit.png" />
+                    </section>
+
+                    <section>
+                        <h2>Behind the scenes</h2>
+                        <img src="img/git-commits.png" />
+                    </section>
+
+                    <section>
+                        <h1>Demo</h1>
+                    </section>
+
+                    <section>
+                        <h2>Branching</h2>
+                        <img src="img/git-branch.png" />
+                    </section>
+
+                    <section>
+                        <h2>Merging</h2>
+                        <img src="img/git-merge.png" />
+                    </section>
+
+                    <section>
+                        <h2>Merging</h2>
+                        <img src="img/git-history-bad.gif" />
+                    </section>
+
+                    <section>
+                        <h2>Rebasing</h2>
+                        <img src="img/git-rebase-1.png" />
+                    </section>
+
+                    <section>
+                        <h2>Rebasing</h2>
+                        <img src="img/git-rebase-2.png" />
+                    </section>
+
+                    <section>
+                        <h2>Rebasing</h2>
+                        <img src="img/git-rebase-3.png" />
+                    </section>
+
+                    <section>
+                        <h2>Opdracht (+- 15 minuten)</h2>
+                        <div class="left" style="font-size:80%;border-right: 1px solid black;width:48%;">
+                            <h4>Part 1</h4>
+                            <ol>
+                                <li>Creer een nieuwe branch vanaf master</li>
+                                <li>Maak op de branch een aanpassing in bestand1.txt en commit dit</li>
+                                <li>Ga nu terug naar de master branch</li>
+                                <li>Maak een aanpassing in bestand1.txt waar een merge conflict zou moeten onstaan met de wijziging op je branch en commit dit</li>
+                                <li>Merge nu je wijzigingen naar master en los de merge conflicten op.</li>
+                                <li>Bekijk de graph en onthou wat je ziet.</li>
+                            </ol>
+                        </div>
+
+                        <div class="right" style="font-size:80%;">
+                            <h4>Part 2</h4>
+                            <ol>
+                                <li>Reset je repository naar de laatste commit voor de merge (NEW)</li>
+                                <li>Rebase de nieuwe branch op master</li>
+                                <li>Merge de branches en bekijk de graph</li>
+                                <li>Wat is het verschil?</li>
+                            </ol>
+
+                            <p><br/><i>Tijd over? Probeer de rebase eens via een interactive rebase te doen!</i><br/></p>
+
+                            <p><b><i>Graph: git log --graph --oneline --all</i></b></p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h1>Remote</h1>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-1.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-2.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-3.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-4.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-5.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <img src="img/git-remote-6.PNG" style="height:60vh;"/>
+                    </section>
+
+                    <section>
+                        <h2>Opdracht (+- 10 minuten)</h2>
+                        <ol>
+                            <li>Ga naar een nieuwe directory en clone de repository waar bestand1.txt in staat</li>
+                            <li>Commit hier een aantal wijzigingen op de master branch</li>
+                            <li>Push deze wijzigingen naar de remote</li>
+                            <li>Maak vervolgens nog een wijziging en commit deze. Push de wijziging nog niet!</li>
+                            <li>Ga naar de `remote`, maak hier ook een wijziging en commit deze</li>
+                            <li>Ga terug naar de lokaal uitgecheckte repository en probeer je wijzigingen te pushen.</li>
+                            <li>Wat gaat er mis? Hoe kan je dit oplossen?</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>Puzzel</h2>
+                        <img src="img/git-puzzle-qr.jpg" alt=""><br/>
+                        <p>https://git.io/git-puzzle</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Thanks!</h2>
+                    <p>
+                        Slides available at <a href="https://github.com/infosupport/studenttrack-clean-code">https://git.io/clean-code</a>
+                        <img src="img/github-qr.png" style="height: 50vh;"/>
+                    </p>
                 </section>
             </div>
 
