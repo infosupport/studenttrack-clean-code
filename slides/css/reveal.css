@@ -1201,3 +1201,9 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+html:-webkit-full-screen-ancestor {
+  background-color: inherit; }
+
+html:-moz-full-screen-ancestor {
+   background-color: inherit; }
