@@ -112,12 +112,12 @@
   if (paymentIds.size() &lt;= 1000) { <span class="fragment" data-fragment-index="0" style="color: #008000;font-weight: bold;">&larr; Why 1000?</span>
     return Arrays.asList(paymentIds);
   } else {
-    int parts = (paymentIds.size() / 1000) + 1;<span class="fragment" data-fragment-index="1" style="color: #008000;font-weight: bold;"">&larr; Why + 1?</span>
+    int parts = (paymentIds.size() / 1000) + 1; <span class="fragment" data-fragment-index="1" style="color: #008000;font-weight: bold;">&larr; Why + 1?</span>
     List&lt;List&lt;String&gt;&gt; paymentIdsParts = new ArrayList&lt;&gt;(parts);
     for (int i = 0; i &lt; parts; i++) {
       int start = i * 1000;
       int end = (i + 1) * 1000;
-      if ((i + 1) == parts) {<span class="fragment" data-fragment-index="2" style="color: #008000;font-weight: bold;"">&larr; What does the equation say?</span>
+      if ((i + 1) == parts) {<span class="fragment" data-fragment-index="2" style="color: #008000;font-weight: bold;">&larr; What does the equation say?</span>
         end = paymentIds.size();
       }
       paymentIdsParts.add(paymentIds.subList(start, end));
@@ -181,7 +181,7 @@
                     </section>
 
                     <section>
-                        <pre><code class="java">public function getFlaggedCells(List&lt;Cell&gt; board) {
+                        <pre><code class="java">public List&lt;Cell&gt; getFlaggedCells(List&lt;Cell&gt; board) {
     List&lt;Cell&gt; flaggedCells = new ArrayList&lt;&gt;();
     for (Cell cell : board) {
         if (cell.isFlagged()) {
@@ -245,8 +245,8 @@ for (int i = 0; i < NUMBER_OF_TASKS; i++) {
                     </section>
 
                     <section>
-                        <pre><code class="java">String phoneString = 'Some string';
-String s_phone = 'Some string';
+                        <pre><code class="java">String phoneString = "Some string";
+String s_phone = "Some string";
 
 interface IShape {
     public int getSize();
@@ -368,13 +368,13 @@ renderWithoutShadows();</span></code></pre>
                     <section>
                         <pre><code class="java">private void removeNegatives(List&lt;Integer&gt; values) {
     for (int index = 0; index < values.size(); index++) {
-        if (values[index] < 0) {
+        if (values.get(index) < 0) {
             values.remove(index);
         }
     }
 }
 
-List&lt;Integer&gt; values = Arrays.asList(2, -3, 4, 5);
+List&lt;Integer&gt; values = new ArrayList&lt;&gt;(Arrays.asList(2, -3, 4, 5));
 removeNegatives(values);
 values.forEach(System.out::println); // 2, 4, 5</code></pre>
                         <p class="fragment" data-fragment-index="1">Should not have side effects!</p>
@@ -401,7 +401,7 @@ values.forEach(System.out::println); // 2, 4, 5</code></pre>
                     </section>
 
                     <section>
-                        <pre><code class="java"><span class="fragment" data-fragment-index="1">private void set(String key, Object value) {
+                        <pre><code class="java"><span class="fragment" data-fragment-index="1">private boolean set(String key, Object value) {
     /** execute some logic **/
 
     return succes;
@@ -527,7 +527,7 @@ for (Employee e: employees) {
                     </section>
 
                     <section>
-                        <pre><code data-trim class="java">public function loadSettings() {
+                        <pre><code data-trim class="java">public void loadSettings() {
     try {
         loadProperties.load('SomeFile.prop');
     } catch (IOException e) {
@@ -551,7 +551,7 @@ class Counter {
      * Return the count
      * @return the count
      */
-    public function getCount() {
+    public int getCount() {
         return this.count;
     }
 }</code></pre>
@@ -571,7 +571,7 @@ class Counter {
 
     private int count = 0
 
-    public function getCount() {
+    public int getCount() {
         return this.count;
     }
 }</code></pre>
@@ -653,13 +653,14 @@ class Counter {
                     </section>
 
                     <section>
-                        <h2>Dont repeat yourself</h2>
+                        <h2>Don't repeat yourself</h2>
                         <p class="fragment">Duplicated code is a breeding ground for bugs</p>
+                        <p class="fragment">Opposite: WET (Write Everything Twice)</p>
                     </section>
 
                     <section>
                         <h2>YAGNI</h2>
-                        <p class="fragment">You Aint Gonna Need It</p>
+                        <p class="fragment">You Ain't Gonna Need It</p>
                     </section>
 
                     <section>
