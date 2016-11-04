@@ -181,7 +181,7 @@
                     </section>
 
                     <section>
-                        <pre><code class="java">public function getFlaggedCells(List&lt;Cell&gt; board) {
+                        <pre><code class="java">public List&lt;Cell&gt; getFlaggedCells(List&lt;Cell&gt; board) {
     List&lt;Cell&gt; flaggedCells = new ArrayList&lt;&gt;();
     for (Cell cell : board) {
         if (cell.isFlagged()) {
@@ -245,8 +245,8 @@ for (int i = 0; i < NUMBER_OF_TASKS; i++) {
                     </section>
 
                     <section>
-                        <pre><code class="java">String phoneString = 'Some string';
-String s_phone = 'Some string';
+                        <pre><code class="java">String phoneString = "Some string";
+String s_phone = "Some string";
 
 interface IShape {
     public int getSize();
@@ -527,7 +527,7 @@ for (Employee e: employees) {
                     </section>
 
                     <section>
-                        <pre><code data-trim class="java">public function loadSettings() {
+                        <pre><code data-trim class="java">public void loadSettings() {
     try {
         loadProperties.load('SomeFile.prop');
     } catch (IOException e) {
@@ -551,7 +551,7 @@ class Counter {
      * Return the count
      * @return the count
      */
-    public function getCount() {
+    public int getCount() {
         return this.count;
     }
 }</code></pre>
@@ -571,7 +571,7 @@ class Counter {
 
     private int count = 0
 
-    public function getCount() {
+    public int getCount() {
         return this.count;
     }
 }</code></pre>
