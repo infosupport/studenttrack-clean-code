@@ -86,19 +86,13 @@
                 </section>
 
                 <section>
-                    <h1>Huisregels</h1>
-                </section>
-
-                <section>
                     <h2>Agenda</h2>
                     <ul>
-                        <li>09:00 - 10.30 : Clean Code</li>
-                        <li>10.30 - 10.50 : Koffiepauze</li>
-                        <li>10.50 - 12.00 : Clean Code</li>
-                        <li>12.00 - 12.45 : Lunch</li>
-                        <li>12.45 - 14.30 : Git</li>
-                        <li>14.30 - 14.50 : Middagpauze</li>
-                        <li>14.50 - 16.00 : Git</li>
+                        <li>12:30 - 14:00 : Clean code</li>
+                        <li>14:00 - 14:10 : Koffiepauze</li>
+                        <li>14:10 - 15:30 : Clean code</li>
+                        <li>15:30 - 15:40 : Koffiepauze</li>
+                        <li>15:40 - 16:30 : Git</li>
                     </ul>
                 </section>
 
@@ -154,10 +148,6 @@
                     <h1 style="color: white;">Broken Window Theory</h1>
                 </section>
 
-                <section style="height:100%;">
-                    <img src="img/clean_code_cover.jpg" style="height:90%;"/>
-                </section>
-
                 <section>
                     <section>
                         <h1>Meaningful Names</h1>
@@ -169,7 +159,7 @@
                     </section>
 
                     <section>
-                        <pre><code class="java">public List&lt;Cell&gt; getThem(List&lt;Cell&gt; theList) {
+                        <pre><code class="java" style="font-size: 0.8em; line-height: normal">public List&lt;Cell&gt; getThem(List&lt;Cell&gt; theList) {
     List&lt;Cell&gt; list1 = new ArrayList&lt;&gt;();
     for (Cell x: theList) {
         if (x.getState() == 4) {
@@ -177,11 +167,9 @@
         }
     }
     return list1;
-}</code></pre>
-                    </section>
+}
 
-                    <section>
-                        <pre><code class="java">public List&lt;Cell&gt; getFlaggedCells(List&lt;Cell&gt; board) {
+<span class="fragment" data-fragment-index="1">public List&lt;Cell&gt; getFlaggedCells(List&lt;Cell&gt; board) {
     List&lt;Cell&gt; flaggedCells = new ArrayList&lt;&gt;();
     for (Cell cell : board) {
         if (cell.isFlagged()) {
@@ -189,25 +177,21 @@
         }
     }
     return flaggedCells;
-}</code></pre>
+}</span></code></pre>
                     </section>
 
                     <section>
-                        <pre><code class="java">// Where a1 and a2 are arrays
-private static void copyChars(char[] a1, char[] a2) {
+                        <pre><code class="java">private static void copyChars(char[] a1, char[] a2) {
     for (int i = 0; i < a1.length; i++) {
         a2[i] = a1[i];
     }
-}</code></pre>
-                    </section>
+}
 
-                    <section>
-                        <pre><code class="java">// Where source and destination are arrays
-private static void copyChars(char[] source, char[] destination) {
+<span class="fragment" data-fragment-index="1">private static void copyChars(char[] source, char[] destination) {
     for (int i = 0; i < source.length; i++) {
         destination[i] = source[i];
     }
-}</code></pre>
+}</span></code></pre>
                     </section>
 
                     <section>
@@ -227,12 +211,9 @@ private static void copyChars(char[] source, char[] destination) {
                       <pre><code class="java">int s = 0;
 for (int i = 0; i < 34; i++) {
     s += (t[i] * 4) / 5;
-}</code></pre>
-                  </section>
-
-
-                    <section>
-                      <pre><code class="java">final int WORK_DAYS_PER_WEEK = 5;
+}
+<!--TODO code voorbeeld aanpassen-->
+<span class="fragment" data-fragment-index="1">final int WORK_DAYS_PER_WEEK = 5;
 final int REAL_DAYS_PER_IDEAL_WEEK = 4;
 final int NUMBER_OF_TASKS = 34;
 int sum = 0;
@@ -240,9 +221,11 @@ for (int i = 0; i < NUMBER_OF_TASKS; i++) {
     int realTaskDays = taskEstimate[i] * REAL_DAYS_PER_IDEAL_WEEK;
     int realTaskWeeks = realTaskDays / WORK_DAYS_PER_WEEK;
     sum += realTaskWeeks;
-}</code></pre>
-                        <p class="fragment" data-fragment-index="2">Use searchable names</p>
-                    </section>
+}</span></code></pre>
+                      <p class="fragment" data-fragment-index="2">Use searchable names</p>
+                  </section>
+
+
 
                     <section>
                         <pre><code class="java">String phoneString = "Some string";
@@ -477,7 +460,7 @@ List&lt;Employee&gt; employees = getEmployees(); // Returns empty list
 for (Employee e: employees) {
     // Do something
 }</span></code></pre>
-                        <p class="fragment">Also possible to use the Null Object pattern</p>
+                        <p class="fragment">Also possible to use the Null Object pattern (or when using Java the Optional pattern)</p>
                     </section>
 
                     <section>
@@ -502,15 +485,6 @@ for (Employee e: employees) {
                         <h2 class="fragment" data-fragment-index="0">NEVER USE GOTO</h2>
                         <img src="img/goto.png" />
                     </section>
-
-                    <section>
-                        <h2>Practice Time!</h2>
-                        <p>
-                            Code available at <a href="https://github.com/infosupport/studenttrack-clean-code">https://git.io/clean-code</a>
-                            <img src="img/github-qr.png" style="height: 50vh;"/>
-                        </p>
-                        <p>Try to apply the rules we've discussed so far.</p>
-                    </section>
                 </section>
 
                 <section>
@@ -531,7 +505,7 @@ for (Employee e: employees) {
     try {
         loadProperties.load('SomeFile.prop');
     } catch (IOException e) {
-        // No properties files means all default are loaded
+        // No properties files means all defaults are loaded
     }
 }</code></pre>
                         <p class="fragment" data-fragment-index="1">Mumbling</p>
@@ -644,8 +618,11 @@ class Counter {
                     </section>
 
                     <section>
-                        <h2>Keep It Simply Stupid</h2>
-                        <p class="fragment">Your code should not be a Rube Goldberg machine</p>
+                        <h2>Keep It Simple Stupid</h2>
+                        <p class="fragment">
+                            Your code should not be a Rube Goldberg machine
+                            <img src="img/goldberg-machine.jpg" style="height: 50vh;">
+                        </p>
                     </section>
 
                     <section data-background-image="img/dry.jpg">
@@ -846,11 +823,6 @@ List&lt;List&lt;String&gt;&gt; result = ListUtils.partition(source, parts);</cod
                     </section>
 
                     <section>
-                        <div class="left vertical-center"><img src="img/git-bitkeeper.png"></div>
-                        <div class="right vertical-center"><img class="fragment" data-fragment-index="1" src="img/git-logo.png"></div>
-                    </section>
-
-                    <section>
                         <h2>The three stages</h2>
                         <img src="img/git-stages-1.jpg" />
                     </section>
@@ -876,12 +848,12 @@ List&lt;List&lt;String&gt;&gt; result = ListUtils.partition(source, parts);</cod
                         <ol>
                             <li>Creer een nieuwe git repository</li>
                             <li>Voeg een bestand toe -> bestand1.txt</li>
-                            <li>Verplaats bestand1.txt naar de staging area</li>
+                            <li>Verplaats bestand1.txt naar de staging area (index)</li>
                             <li>Maak bestand2.txt aan en zorg dat git dit bestand negeert </li>
                             <li>Commit bestand1.txt</li>
                             <li>Maak de commit ongedaan (NEW)</li>
                             <li>Pas bestand1.txt aan</li>
-                            <li>Commit alle wijzigingen in de staging area</li>
+                            <li>Commit alle wijzigingen in de staging area (index)</li>
                             <li>Pas het bestand aan en voeg deze toe aan de commit zonder de commit ongedaan te maken (NEW)</li>
                         </ol>
                     </section>
@@ -905,10 +877,6 @@ List&lt;List&lt;String&gt;&gt; result = ListUtils.partition(source, parts);</cod
                     <section>
                         <h2>Behind the scenes</h2>
                         <img src="img/git-commits.png" />
-                    </section>
-
-                    <section>
-                        <h1>Demo</h1>
                     </section>
 
                     <section>
@@ -996,19 +964,6 @@ List&lt;List&lt;String&gt;&gt; result = ListUtils.partition(source, parts);</cod
 
                     <section>
                         <img src="img/git-remote-6.PNG" style="height:80vh;"/>
-                    </section>
-
-                    <section>
-                        <h2>Opdracht (+- 10 minuten)</h2>
-                        <ol>
-                            <li>Ga naar een nieuwe directory en clone de repository waar bestand1.txt in staat</li>
-                            <li>Commit hier een aantal wijzigingen op de master branch</li>
-                            <li>Push deze wijzigingen naar de remote</li>
-                            <li>Maak vervolgens nog een wijziging en commit deze. Push de wijziging nog niet!</li>
-                            <li>Ga naar de `remote`, maak hier ook een wijziging en commit deze</li>
-                            <li>Ga terug naar de lokaal uitgecheckte repository en probeer je wijzigingen te pushen.</li>
-                            <li>Wat gaat er mis? Hoe kan je dit oplossen?</li>
-                        </ol>
                     </section>
 
                     <section>
