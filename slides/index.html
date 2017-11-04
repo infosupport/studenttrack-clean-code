@@ -207,21 +207,26 @@
                         <p class="fragment" data-fragment-index="2">Use pronouncable names</p>
                     </section>
 
-                  <section>
-                      <pre><code class="java">int s = 0;
-for (int i = 0; i < 34; i++) {
-    s += (t[i] * 4) / 5;
+                  <section style="font-size: 90%;">
+                      <pre><code class="java">
+public class PasswordGeneratingService {
+  private static final int I = 10;
+  private static final String CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ";
+  private static final String EXTRA_CHARS = "abcdefghjkmnpqrstuvwxyz";
+  private static final String NUMBERS = "23456789"
+  // Some methods to generate a random password.
 }
-<!--TODO code voorbeeld aanpassen-->
-<span class="fragment" data-fragment-index="1">final int WORK_DAYS_PER_WEEK = 5;
-final int REAL_DAYS_PER_IDEAL_WEEK = 4;
-final int NUMBER_OF_TASKS = 34;
-int sum = 0;
-for (int i = 0; i < NUMBER_OF_TASKS; i++) {
-    int realTaskDays = taskEstimate[i] * REAL_DAYS_PER_IDEAL_WEEK;
-    int realTaskWeeks = realTaskDays / WORK_DAYS_PER_WEEK;
-    sum += realTaskWeeks;
-}</span></code></pre>
+                        <!--TODO code voorbeeld aanpassen-->
+                        <span class="fragment" data-fragment-index="1">
+public class PasswordGeneratingService {
+    private static final int PASSWORD_LENGTH = 10;
+    private static final String PASSWORD_UPPER_CHARACTERS = "ABCDEFGHJKMNPQRSTUVWXYZ";
+    private static final String PASSWORD_LOWER_CHARACTERS = "abcdefghjkmnpqrstuvwxyz";
+    private static final String PASSWORD_NUMBER_CHARACTERS = "23456789";
+    // Some methods to generate a random password.
+}
+                        </span>
+                      </code></pre>
                       <p class="fragment" data-fragment-index="2">Use searchable names</p>
                   </section>
 
