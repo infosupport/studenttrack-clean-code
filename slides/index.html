@@ -99,6 +99,12 @@
                 <section>
                     <h1>Clean Code</h1>
                     <img src="img/code_quality.png" />
+                    <aside class="notes">
+                        <ul>
+                            <li>Best practices uit het boek Clean Code</li>
+                            <li>Code voorbeelden zijn in Java practices zijn toe te passen op de meeste programmeertalen</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -146,6 +152,14 @@
 
                 <section style="height: 100%;" data-background-image="img/broken_window.jpg">
                     <h1 style="color: white;">Broken Window Theory</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>Een theorie uit de criminologie</li>
+                            <li>Omgevingen die reeds vervuild zijn, trekken meer vuil aan</li>
+                            <li>Een appartementengebouw met een gebroken raam zal bijv. meer vandalisme en gebroken ramen aantrekken</li>
+                            <li>Code die reeds "vervuild" is zal alleen maar groeien wat het probleem steeds groter maakt</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -216,7 +230,6 @@ public class PasswordGeneratingService {
   private static final String NUMBERS = "23456789"
   // Some methods to generate a random password.
 }
-                        <!--TODO code voorbeeld aanpassen-->
                         <span class="fragment" data-fragment-index="1">
 public class PasswordGeneratingService {
     private static final int PASSWORD_LENGTH = 10;
@@ -240,6 +253,12 @@ interface IShape {
     public int getSize();
 }</code></pre>
                         <p class="fragment" data-fragment-index="1">Avoid encodings</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>phoneString, String in de naam is overbodig want het type is al String.</li>
+                                <li>s_, in de naam is overbodig want het type is al String.</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
